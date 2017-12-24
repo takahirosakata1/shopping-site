@@ -78,48 +78,14 @@ header .sp_menu {
 
 header .sp_menu li {
     display: inline-block;
-    /*float: left;*/
+    float: left;
     padding: 0 5px;
-    margin-right: auto;
-    margin-left: auto
 }
 
 header .pc_menu {
     display: none;
 }
 
-
-.sp_menu_li {
-    border: 1px solid #eee;
-    background: white;
-    display: block;
-    padding: 10px 8px;
-}
-
-
-
-a {
-    /*display: block;*/
-    padding: 10px 0px;
-    /*border-bottom: 1px solid #eee;*/
-    font-size: 14px;
-    text-decoration: none;
-
-}
-
-
-@media (min-width: 550px) {
-    header .sp_menu {
-        display: none
-    }
-}
-
-@media (max-width: 549px) {
-    header #header_in .pc_menu {
-        display: none;
-
-    }
-}
 
 @media (min-width: 550px) {
     header h1 {
@@ -145,35 +111,60 @@ a {
         float: left;
         padding-right: 15px;
     }
-    header .pc_menu .sns {
+    header .pc_menu .social {
         padding-right: 8px;
+
     }
 }
+
+
+
 
 /*トグルメニュー*/
 
-.sp_menu_toggle {
+.toggle {
+    text-align: left;
+}
+
+.toggle .sp_menu_toggle {
+    position: relative;
     display: none;
+    z-index: 100;
+    padding-bottom: 20px;
 }
 
-.sp_menu_toggle {
+.toggle .sp_menu_toggle {
+    margin: 0;
+    padding: 5px 0;
+    width: 100%;
+    background-color: #ff6d77;
     list-style: none;
-
 }
 
-.sp_menu_toggle li {
-    border-bottom: 1px solid #eee;
+.toggle .sp_menu_toggle li {
+    margin: 10px;
+    border-bottom: 1px solid white;
+    padding: 3px 3px 10px 3px;
+}
+
+.toggle .sp_menu_toggle li a {
+    color: white;
+    text-decoration: none;
+}
+
+.toggle .sp_menu_toggle li:last-child {
+    border-bottom: 0;
 }
 
 @media (min-width: 550px) {
-    .sp_menu_toggle li {
-        display: none
+    .toggle {
+        display: none;
     }
 }
 
-#menu {
-    cursor: pointer;
-}
+
+
+
 
 /*メイン左側コンテンツ*/
 
@@ -284,7 +275,7 @@ a {
 /** #maincontents pro_list_all **/
 
 #maincontents .pro_box {
-    width: 99%;
+    width: 49%;
     float: left;
     font-size: 11px;
     font-size: 1.1rem;
@@ -313,13 +304,14 @@ a {
 }
 
 @media (min-width: 550px) {
-    #maincontents .pro_all {
+    #maincontents .pro_list_all {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+
     }
     #maincontents .pro_box {
-        width: 32%;
+        width: 49%;
         padding-right: 2px;
         margin-bottom: 1px;
     }
